@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import static com.rifki.notificationapp.App.CHANNEL_1_ID;
-import static com.rifki.notificationapp.App.CHANNEL_2_ID;
 
 public class MainActivity extends AppCompatActivity {
     private NotificationManagerCompat notificationManager;
@@ -49,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
 
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
                 .setSmallIcon(R.drawable.ic_notifications_paused_black_24dp)
-                .setContentTitle(title)
-                .setContentText(message)
+                .setContentTitle("Hai, Rifki")
+                .setContentText("Yuk lihat aplikasimu!!!")
                 .setLargeIcon(largeIcon)
                 .setStyle(new NotificationCompat.BigTextStyle()
                         .bigText(getString(R.string.long_dummy_text))
-                        .setBigContentTitle("Big Content Title")
-                        .setSummaryText("Summary Text"))
+                        .setBigContentTitle("Hai, Rifki")
+                        .setSummaryText("Penting!"))
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .setColor(Color.BLUE)
@@ -66,28 +65,5 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         notificationManager.notify(1, notification);
-    }
-
-    public void sendOnChannel2(View v) {
-        String title = editTextTitle.getText().toString();
-        String message = editTextMessage.getText().toString();
-
-        Notification notification = new NotificationCompat.Builder(this, CHANNEL_2_ID)
-                .setSmallIcon(R.drawable.ic_notifications_black_24dp)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setStyle(new NotificationCompat.InboxStyle()
-                        .addLine("This is line 1")
-                        .addLine("This is line 2")
-                        .addLine("This is line 3")
-                        .addLine("This is line 4")
-                        .addLine("This is line 5")
-                        .addLine("This is line 6")
-                        .addLine("This is line 7")
-                        .setBigContentTitle("Big Content Title")
-                        .setSummaryText("Summary Text"))
-                .setPriority(NotificationCompat.PRIORITY_LOW)
-                .build();
-        notificationManager.notify(2, notification);
     }
 }

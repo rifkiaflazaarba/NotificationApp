@@ -21,15 +21,15 @@
         android:hint="Message" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_marginTop="22dp"
+        android:layout_width="200dp"
+        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:onClick="sendOnChannel1"
-        android:text="Send on Channel 1" />
+        android:text="Lihat Notifkikasi"
+        android:textColor="#FFF"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="sendOnChannel2"
-        android:text="Send on Channel 2" />
 
 </LinearLayout>
